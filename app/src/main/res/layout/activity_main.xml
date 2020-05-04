@@ -9,29 +9,26 @@
 
     <TextView
         android:id="@+id/displayText"
-        android:layout_width="410dp"
-        android:layout_height="344dp"
-        android:layout_marginStart="10dp"
+        android:layout_width="415dp"
+        android:layout_height="342dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="6dp"
         android:text="$"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#040404"
         android:textSize="260sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/timerSeekBar"
+        app:layout_constraintBottom_toTopOf="@+id/letterSelections"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/scoreCounter" />
 
     <Button
         android:id="@+id/triggerButton"
         android:layout_width="248dp"
         android:layout_height="65dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="93dp"
+        android:layout_marginBottom="52dp"
         android:backgroundTint="#009688"
         android:onClick="buttonClicked"
         android:text="Go!"
@@ -39,58 +36,71 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timerText" />
+
+    <SeekBar
+        android:id="@+id/timerSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/timerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letterSelections" />
 
     <TextView
         android:id="@+id/timerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="16dp"
         android:text="Ready"
-        android:textSize="80sp"
+        android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/triggerButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timerSeekBar" />
 
-    <SeekBar
-        android:id="@+id/timerSeekBar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/timerText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayText" />
-
     <TextView
         android:id="@+id/letterSelections"
         android:layout_width="match_parent"
         android:layout_height="23dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
         android:text="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/timerSeekBar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/triggerButton" />
+        app:layout_constraintTop_toBottomOf="@+id/displayText" />
+
+    <TextView
+        android:id="@+id/roundDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Round"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/scoreCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        app:layout_constraintBottom_toTopOf="@+id/letterSelections"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/triggerButton" />
+        app:layout_constraintTop_toBottomOf="@+id/roundDisplay" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
