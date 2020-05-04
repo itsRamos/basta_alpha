@@ -15,7 +15,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:text="#"
+        android:text="$"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#040404"
@@ -47,10 +47,9 @@
         android:id="@+id/timerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:text="Ready"
-        android:textSize="90sp"
+        android:textSize="80sp"
         app:layout_constraintBottom_toTopOf="@+id/triggerButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -62,12 +61,36 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/timerText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/displayText" />
+
+    <TextView
+        android:id="@+id/letterSelections"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/triggerButton" />
+
+    <TextView
+        android:id="@+id/scoreCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/letterSelections"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/triggerButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
